@@ -1,0 +1,285 @@
+/* Variable color theme */
+:root {
+    --primary-color: #333; /*  */
+    --secondary-color: #4285f4; /* Google Blue */
+    --background-color: #f5f5f5;
+    --text-color: #fff;
+    --grey-clr: rgb(95, 95, 95);
+}
+
+
+/* Reset some default styles */
+
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+}
+body, h1, h2, h3, p, ul, li, a, time {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+/* Basic styling for layout */
+header,nav ,section, footer {
+    margin: 20px;
+}
+
+/* Header styles */
+#header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.blog-title {
+    font-size: 24px;
+}
+
+.welcome-message {
+    font-size: 16px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--grey-clr);
+}
+
+/* Sub-nav */
+#sub-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Hero section styles */
+.hero {
+    margin-top: 20px;
+}
+
+.featured-title {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.featured-post {
+    background-color: var(--background-color);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.featured-post .post-date{
+    color: var(--grey-clr);
+}
+
+.post-title {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.post-date {
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.post-content {
+    margin-top: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Card list styles */
+
+#card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem; /* Adjust the gap between cards */
+}
+
+.card {
+    width: calc(100% - 10px);
+    background-color: var(--background-color);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+/* #card-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    flex-basis: calc(33.33% - 10px);
+    background-color: var(--background-color);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+} */
+
+.card-title {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.card-content {
+    margin-top: 5px;
+}
+
+/* Recent posts styles */
+#recent-posts-section {
+    margin-top: 20px;
+}
+
+.recent-title {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.recent-post {
+    background-color: var(--background-color);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* About section styles */
+#about-section {
+    margin-top: 20px;
+}
+
+.about-title {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.about-content {
+    margin-top: 10px;
+}
+
+/* Footer styles */
+/* #footer {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 8px;
+
+} */
+
+#footer {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 8px;
+}
+
+
+.contact-title,
+.follow-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-info,
+.social-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Copyright text */
+.copyright-text {
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+
+
+/* Add media query for screens with a maximum width of 600px (typical for phones) */
+@media only screen and (max-width: 600px) {
+
+    /* Reset some styles for smaller screens */
+    body {
+        font-size: 14px; /* Adjust font size for better readability on small screens */
+    }
+
+    #header {
+        padding: 1rem; /* Reduce top and bottom padding */
+    }
+
+    .blog-title {
+        font-size: 20px;
+    }
+
+    .welcome-message {
+        font-size: 14px;
+    }
+
+    .nav-link {
+        margin-right: 10px; /* Reduce margin between navigation links */
+    }
+
+    /* .hero, .card, .recent-post {
+        margin: 10px 0; /* Reduce top and bottom margins for sections */
+    
+
+        #card-section {
+            grid-template-columns: 1fr; /* Stacking columns on smaller screens */
+        }
+
+    #footer {
+        flex-direction: column; /* Set to column to stack items vertically */
+        padding: 10px; /* Reduce padding in the footer for smaller screens */
+    }
+
+    .contact-title, .follow-title {
+        font-size: 16px; /* Adjust font size for titles in the footer */
+        margin-bottom: 5px;
+    }
+
+    .contact-info, .social-link, .copyright-text {
+        font-size: 12px; /* Adjust font size for text in the footer */
+        margin-bottom: 3px;
+    }
+}
